@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Star Renovation and Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="fotos/LOGO PNG ALL STAR.png" type="image/jpeg"> <!-- Favicon añadido -->
+</head>
+<body style="font-family: 'Times New Roman', serif;">
+  
+    <header>
+        <div class="header__logo">
+            <a href="Inicio.html">
+                <img src="fotos/ft mejorada 44.png" alt="Logo" class="logo"> 
+            </a>
+        </div>  
+
+        <!-- Icono de hamburguesa para dispositivos móviles -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="header__Menu" id="menu">
+            <a class="header__Menu__link_catalogo-link" href="Inicio.html">Home</a>
+            <a class="header__Menu__link_catalogo-link" href="about.html">All Star Renovation</a>
+            <a class="header__Menu__link_catalogo-link" href="index.html">Catalog</a>
+            <a class="header__Menu__link_catalogo-link" href="Contacto.html">Contact</a>
+        </nav>
+
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-cart"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+        
+            <!-- Carrito de productos, inicialmente oculto -->
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <!-- Productos se insertan aquí dinámicamente -->
+                </div>
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$0</span>
+                </div>
+                <p class="cart-empty">The cart is empty</p>
+            </div>
+        </div>
+        
+        <!-- Enlace con el botón comprar, inicialmente oculto -->
+        <a id="link-comprar" href="Contacto.html" class="hidden">
+            <button id="btn-comprar" class="btn-comprar">Buy</button>
+        </a>
+
+
+    </header>
+
+    <script>
+        // Seleccionamos los elementos
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+    
+        // Agregamos un evento al icono de hamburguesa
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar u ocultar el menú
+        });
+    </script>
+    
+
+<div class="resolucion"></div>
+    <div class="desktop">
+       
+    </div>
+    <div class="tablet">
+        
+    </div>
+    <div class="movil">
+       
+    </div>
+</div>
+
+
+<!-- Imagenes panoramicas -->
+<div class="carousel-container">
+    <div class="carousel-slides">
+        <!-- Imágenes originales -->
+        <div class="carousel-slide">
+            <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://cdn.prod.website-files.com/62c847ad5a8f51e7bc4309e6/65f49c9c6dc2aecf0f94346d_propiedades-bg%20Invert%C3%AD%20En%20Propiedades.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 3">
+        </div>
+        <!-- Duplicamos las imágenes para crear el bucle continuo -->
+        <div class="carousel-slide">
+            <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="https://www.dreamcarsautorepair.com/wp-content/uploads/2023/12/WallpaperDog-20338264-1.png" alt="Image 3">
+        </div>
+    </div>
+</div>
+
+
+<div class="container-items">  
+
+        <!-- Plantilla Agregar producto -->   
+        <div class="item">
+            <figure>
+                <img src="fotos/remodelacion 10.2.jpeg" alt="Producto" data-modal="myModal4">
+            </figure>
+            <div class="info-product">
+                <h2>Bathroom</h2>
+                <p class="price"></p>
+                <button class="btn-add-cart">Make your quota</button>
+            </div>
+       <!-- Final plantilla -->
+
+        <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/30.jpg" alt="Producto" data-modal="myModal4">
+        </figure>
+        <div class="info-product">
+            <h2>Bathroom</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+    <!-- Final plantilla -->
+
+          <!-- Plantilla Agregar producto -->   
+        </div>
+        <div class="item">
+            <figure>
+                <img src="fotos/REMODELACION 10.4.jpeg" alt="Producto" data-modal="myModal5">
+            </figure>
+            <div class="info-product">
+                <h2>Bathroom</h2>
+                <p class="price"></p>
+                <button class="btn-add-cart">Make your quota</button>
+            </div>
+         <!-- Final plantilla -->
+
+          <!-- Plantilla Agregar producto -->   
+        </div>
+        <div class="item">
+            <figure>
+                <img src="fotos/22.jpg" alt="Producto" data-modal="myModal6">
+            </figure>
+            <div class="info-product">
+                <h2>Decks</h2>
+                <p class="price"></p>
+                <button class="btn-add-cart">Make your quota</button>
+            </div>
+       <!-- Final plantilla -->
+
+        <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/remodelacion 8.3.jpeg" alt="Producto" data-modal="myModal7">
+        </figure>
+        <div class="info-product">
+            <h2>Decks</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+   <!-- Final plantilla -->
+
+        <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/remodelacion 8.1.jpeg" alt="Producto" data-modal="myModal8">
+        </figure>
+        <div class="info-product">
+            <h2>Decks</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+    <!-- Final plantilla -->
+
+        <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/remodelacion 6.1.jpeg" alt="Producto" data-modal="myModal9">
+        </figure>
+        <div class="info-product">
+            <h2>Decks</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+        <!-- Final plantilla -->
+    
+       <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/REmodelacion 6.2.jpeg" alt="Producto" data-modal="myModal10">
+        </figure>
+        <div class="info-product">
+            <h2>Decks</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+ <!-- Final plantilla -->
+
+            <!-- Plantilla Agregar producto -->   
+    </div>
+    <div class="item">
+        <figure>
+            <img src="fotos/remodelacion 6.jpeg" alt="Producto" data-modal="myModal11">
+        </figure>
+        <div class="info-product">
+            <h2>Decks</h2>
+            <p class="price"></p>
+            <button class="btn-add-cart">Make your quota</button>
+        </div>
+<!-- Final plantilla -->
+
+
+                    <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/13.jpg" alt="Producto" data-modal="myModal16">
+  </figure>
+  <div class="info-product">
+      <h2>Commercial Renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+                     <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/REMODELACION 5.1.jpeg" alt="Producto" data-modal="myModal17">
+  </figure>
+  <div class="info-product">
+      <h2>Roofing and siding</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+
+                   <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/11.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Roofing and siding</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+   <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/1.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Decks</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+   <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/4.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Decks</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+   <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/2.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Decks</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/33.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>roofing</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/34.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>roofing</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/35.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>roofing</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/40.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Basement renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/remodelacion 2.1.jpeg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Basement renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/remodelacion 2.2.jpeg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Basement renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/55.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Windows and doors</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/57.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Windows and doors</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/56.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Windows and doors</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/79.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Bathroom</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/80.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Bathroom</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/81.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>Bathroom</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/90.jpeg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>kitchen renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/102.jpg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>kitchen renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+
+  <!-- PlantillaAgregar producto-->
+</div>
+<div class="item">
+  <figure>
+    <img src="fotos/91.jpeg" alt="Producto" data-modal="myModal18">
+  </figure>
+  <div class="info-product">
+      <h2>kitchen renovation</h2>
+      <p class="price"></p>
+      <button class="btn-add-cart">Make your quota</button>
+  </div>
+  <!-- Final plantilla -->
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 All Star Renovation and Design. All rights reserved.</p>
+                </div>
+            </footer>
+            
+            <script src="index.js"></script>
+            </body>
+            </html>
+

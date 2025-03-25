@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Star Renovation and Design</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="fotos/LOGO PNG ALL STAR.png" type="image/jpeg"> <!-- Favicon añadido -->
+</head>
+<body style="font-family: 'Times New Roman', serif;">
+  
+    <header>
+        <div class="header__logo">
+            <a href="Inicio.html">
+                <img src="fotos/ft mejorada 44.png" alt="Logo" class="logo"> </a>
+        </div>  
+
+        <!-- Icono de hamburguesa para dispositivos móviles -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="header__Menu" id="menu">
+            <a class="header__Menu__link_catalogo-link" href="Inicio.html">Home</a>
+            <a class="header__Menu__link_catalogo-link" href="about.html">All Star Renovation</a>
+            <a class="header__Menu__link_catalogo-link" href="index.html">Catalog</a>
+            <a class="header__Menu__link_catalogo-link" href="Contacto.html">Contact</a>
+        </nav>
+    </header>
+    
+    <script>
+        // Seleccionamos los elementos
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        // Agregamos un evento al icono de hamburguesa
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Alterna la clase 'active' para mostrar u ocultar el menú
+        });
+    </script>
+
+
+    <div class="resolucion"></div>
+        <div class="desktop">
+           
+        </div>
+        <div class="tablet">
+            
+        </div>
+        <div class="movil">
+           
+        </div>
+    </div>
+
+    <!-- Imagenes panoramicas -->
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <!-- Imágenes originales -->
+            <div class="carousel-slide">
+                <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://cdn.prod.website-files.com/62c847ad5a8f51e7bc4309e6/65f49c9c6dc2aecf0f94346d_propiedades-bg%20Invert%C3%AD%20En%20Propiedades.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 3">
+            </div>
+            <!-- Duplicamos las imágenes para crear el bucle continuo -->
+            <div class="carousel-slide">
+                <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://cdn.prod.website-files.com/62c847ad5a8f51e7bc4309e6/65f49c9c6dc2aecf0f94346d_propiedades-bg%20Invert%C3%AD%20En%20Propiedades.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <main class="presentacion">
+        <div class="presentacion__contenido">
+            <div class="presentacion__texto">
+                <h1 class="presentacion__contenido__titulo">About Us</h1>
+                <p class="presentacion__contenido__texto">At All Star Renovation and Design, we specialize in enhancing and transforming spaces, offering customized solutions for both interior and exterior renovations. Our goal is to turn your home or building into a modern, functional, and stylish place that suits your lifestyle. </p>
+                <p class="presentacion__contenido__texto">Our highly skilled team is committed to excellence, ensuring every detail is carefully handled to deliver outstanding results. We specialize in roofing, siding, windows, doors, decks, concrete work, and full renovations. Additionally, we offer custom designs for kitchens, bathrooms, flooring, drywall, and more.</p>
+                <p class="presentacion__contenido__texto">We pride ourselves on providing a transparent, efficient, and high-quality service, always exceeding expectations. We don’t just renovate spaces—we create environments that reflect your personality and enhance your property’s value.</p> 
+                <p class="presentacion__contenido__texto">rust All Star Renovation and Design to bring your vision to life with creativity, expertise, and meticulous attention to detail. Let’s build something amazing together!</p>
+                <p class="presentacion__contenido__texto4">Trust us to bring your dream renovation to life, with a team that puts passion, experience, and dedication into every project!</p>
+            </div>
+            <img class="presentacion__imagen" src="fotos/Remodelacion 1.jpeg" alt="Imagen de all-star trabajando">
+        </div>
+
+        <div class="presentacion__texto-enumerado">
+            <div class="presentacion__item">
+                <span class="presentacion__numero numero-grande" data-target="100">0</span> + Works Sold
+            </div>
+            <div class="presentacion__item">
+                <span class="presentacion__numero numero-pequeno" data-target="8">0</span> + Years in the Market
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numeros = document.querySelectorAll('.presentacion__numero');
+
+            numeros.forEach(numero => {
+                const target = +numero.getAttribute('data-target');
+                let current = 0;
+
+                let increment;
+                let intervalTime;
+
+                if (numero.classList.contains('numero-grande')) {
+                    increment = Math.ceil(target / 200);
+                    intervalTime = 80;
+                } else if (numero.classList.contains('numero-pequeno')) {
+                    increment = Math.ceil(target / 500); // Menor incremento para números más pequeños
+                    intervalTime = 1200; // Mayor intervalo para que la animación sea más lenta
+                }
+
+                const interval = setInterval(() => {
+                    if (current >= target) {
+                        numero.textContent = target;
+                        clearInterval(interval);
+                    } else {
+                        current += increment;
+                        numero.textContent = current;
+                    }
+                }, intervalTime); // Intervalo de tiempo ajustado
+            });
+
+            const header = document.querySelector(".header");
+
+            // Aplica el efecto de aparición cuando la página se carga
+            header.classList.remove("hidden");
+            header.classList.add("visible");
+
+            // Agrega la clase "hidden" antes de cambiar de página
+            window.addEventListener('beforeunload', function() {
+                header.classList.remove("visible");
+                header.classList.add("hidden");
+            });
+        });
+    </script>
+
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 All Star Renovation and Design. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script> <!-- Asegúrate de vincular tu JS -->
+</body>
+</html>
