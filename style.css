@@ -775,15 +775,17 @@ img{
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 5% auto; /* Ajusta el margen superior */
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; /* Ajusta el ancho según sea necesario */
+    width: 80%; /* Ajusta el ancho del modal */
     text-align: center;
 }
 
 .modal img {
-    width: 250px; /* Cambia este valor según necesites */
+    max-width: 100%; /* Ajusta las imágenes al 100% del contenedor sin distorsionarlas */
+    max-height: 80vh; /* Establece una altura máxima para la imagen (puedes ajustarla) */
+    object-fit: contain; /* Mantiene la proporción de la imagen y evita que se corte */
     margin: 10px;
 }
 
@@ -795,8 +797,8 @@ img{
 
 .large-image {
     max-width: 100%; /* Limitar el ancho máximo al contenedor */
-    height: 400px; /* Altura fija para la imagen grande */
-    object-fit: cover; /* Mantener la proporción de la imagen */
+    max-height: 80vh; /* Ajusta la altura máxima */
+    object-fit: contain; /* Asegura que la imagen no se corte */
     display: none; /* Ocultar la imagen grande inicialmente */
 }
 
@@ -830,24 +832,25 @@ img{
 }
 
 /* Estilo para las miniaturas */
-
 .gallery {
-    display: flex; /* Usa flexbox */
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten a varias líneas */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente (si hay espacio extra) */
-    margin: 20px; /* Espaciado alrededor del contenedor */
+    display: flex;          /* Usa flexbox para la organización */
+    flex-direction: column; /* Coloca las imágenes en una columna */
+    justify-content: center; /* Centra las imágenes verticalmente */
+    align-items: center;    /* Centra las imágenes horizontalmente */
+    gap: 20px;              /* Espacio entre las imágenes */
+    margin: 20px;           /* Espacio alrededor de las imágenes */
 }
 
+/* Imágenes dentro del modal */
 .vehicleImage {
-    width: 100%; /* Ajustar el tamaño de las miniaturas al contenedor */
-    height: 200px; /* Altura fija para miniaturas */
-    object-fit: cover; /* Mantener la proporción */
-    transition: transform .5s;
-    align-items: center;
-    margin: 10px; /* Espacio alrededor de cada imagen */
+    width: 100%;            /* Ajusta las imágenes al ancho del contenedor */
+    height: auto;           /* Mantén la proporción de la imagen */
+    object-fit: contain;    /* Asegura que las imágenes no se corten */
+    transition: transform .5s; /* Transición suave */
+    margin: 10px;           /* Espacio entre las imágenes */
 }
 
+/* Efecto de hover */
 .vehicleImage:hover {
     transform: scale(1.05); /* Aumentar ligeramente al pasar el ratón */
 }
@@ -994,26 +997,7 @@ img{
 
 
 
-/*scroll */
-@keyframes show {
-    from{
-        opacity: 0; scale: 10%;
-    }
 
-    to{
-        opacity: 1; scale: 100%;
-    }
-}
-
-.item {
-    view-timeline-name: --reveal;
-
-    animation-name: show;
-    animation-fill-mode: both;
-
-    animation-timeline: --reveal;
-    animation-range: entry 25% cover 50%;
-}
 
 
 
@@ -1160,3 +1144,185 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* El fondo del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+/* El contenido del modal */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Las imágenes del modal */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+/* Flechas de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* El texto que aparece en el modal */
+.project-description {
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Cerrar el modal */
+.close {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+    margin-right: 10px;
+}
+
+/* Estilos para el logo y nombre de la empresa */
+.company-name {
+    font-size: 1.6rem;  /* Puedes ajustar a 2rem si quieres aún más grande */
+    font-weight: bold;
+    color: var(--color-azul);
+}
+
+/* Estilos para los enlaces del menú */
+.header__Menu a {
+    font-size: 1.2rem;  /* Aumenta el tamaño */
+    font-weight: bold;  /* Negrita */
+    color: var(--color-azul);        /* Asegura que se vea bien */
+    text-decoration: none;
+    margin: 0 10px;     /* Espaciado entre links */
+}
+
+/* Para que el menú no se vea muy junto */
+.header__Menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__Menu__link_catalogo-link.active {
+    color: #80bdff; /* Azul, puedes cambiarlo */
+    font-weight: bold;
+}
+
+
+
+#spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Puedes cambiarlo a un color oscuro si prefieres */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+}
+
+#spinner.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner-logo img {
+    width: 100px; /* Tamaño del logo */
+    animation: rotateLogo 2s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

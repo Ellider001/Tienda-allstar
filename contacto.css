@@ -1243,3 +1243,85 @@ header {
         font-size: 1.8rem;
     }
 }
+
+
+
+
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+    margin-right: 10px;
+}
+
+/* Estilos para el logo y nombre de la empresa */
+.company-name {
+    font-size: 1.6rem;  /* Puedes ajustar a 2rem si quieres aún más grande */
+    font-weight: bold;
+    color: var(--color-azul);
+}
+
+/* Estilos para los enlaces del menú */
+.header__Menu a {
+    font-size: 1.2rem;  /* Aumenta el tamaño */
+    font-weight: bold;  /* Negrita */
+    color: var(--color-azul);        /* Asegura que se vea bien */
+    text-decoration: none;
+    margin: 0 10px;     /* Espaciado entre links */
+}
+
+/* Para que el menú no se vea muy junto */
+.header__Menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__Menu__link_catalogo-link.active {
+    color: #80bdff; /* Azul, puedes cambiarlo */
+    font-weight: bold;
+}
+
+
+
+
+#spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Puedes cambiarlo a un color oscuro si prefieres */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+}
+
+#spinner.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner-logo img {
+    width: 100px; /* Tamaño del logo */
+    animation: rotateLogo 2s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

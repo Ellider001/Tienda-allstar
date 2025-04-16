@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Star Renovation and Design</title>
     <link rel="stylesheet" href="contacto.css">
-    <link rel="icon" href="Fotos/LOGO PNG ALL STAR.png" type="image/jpeg"> <!-- Favicon añadido -->
+    <link rel="icon" href="Fotos/ft mejorada 44.png" type="image/jpeg"> <!-- Favicon añadido -->
 </head>
 <body style="font-family: 'Times New Roman', serif;">
- 
+
+         <!-- Spinner Start -->
+         <div id="spinner" class="show">
+            <div class="spinner-logo">
+                <img src="Fotos/ft mejorada 44.png" alt="Logo Spinner">
+            </div>
+        </div>
+        <!-- Spinner End -->
+
     <header>
         <div class="header__logo">
-            <a href="inicio.html">
+            <a href="index.html" class="logo-link">
                 <img src="Fotos/ft mejorada 44.png" alt="Logo" class="logo">
+                <span class="company-name">All Star Renovation and Design</span>
             </a>
-        </div>  
+        </div>
 
         <!-- Icono de hamburguesa para dispositivos móviles -->
         <div class="menu-toggle" id="menu-toggle">
@@ -25,10 +34,10 @@
 
         <!-- Menú de navegación -->
         <nav class="header__Menu" id="menu">
-            <a class="header__Menu__link_catalogo-link" href="inicio.html">Home</a>
-            <a class="header__Menu__link_catalogo-link" href="about.html">All Star Renovation</a>
-            <a class="header__Menu__link_catalogo-link" href="index.html">Catalog</a>
-            <a class="header__Menu__link_catalogo-link" href="contacto.html">Contact</a>
+            <a class="header__Menu__link_catalogo-link" href="index.html">Home</a>
+            <a class="header__Menu__link_catalogo-link" href="about.html">About us</a>
+            <a class="header__Menu__link_catalogo-link" href="catalogo.html">Catalog</a>
+            <a class="header__Menu__link_catalogo-link active" href="contacto.html">Contact</a>
         </nav>
     </header>
 
@@ -61,23 +70,23 @@
     <div class="carousel-slides">
         <!-- Imágenes originales -->
         <div class="carousel-slide">
-            <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+            <img src="Fotos/carrycek 1.jpg" alt="Image 1">
         </div>
         <div class="carousel-slide">
-            <img src="https://cdn.prod.website-files.com/62c847ad5a8f51e7bc4309e6/65f49c9c6dc2aecf0f94346d_propiedades-bg%20Invert%C3%AD%20En%20Propiedades.jpg" alt="Image 2">
+            <img src="Fotos/carrucel 3.jpg" alt="Image 2">
         </div>
         <div class="carousel-slide">
-            <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 3">
+            <img src="Fotos/carrucel 2.jpg" alt="Image 3">
         </div>
         <!-- Duplicamos las imágenes para crear el bucle continuo -->
         <div class="carousel-slide">
-            <img src="https://forbes.do/_next/image?url=https%3A%2F%2Feditorial.forbes.do%2Fwp-content%2Fuploads%2F2022%2F05%2FGrupo-Noriega-CF037788.jpg%3Fv%3D1280720&w=3840&q=75" alt="Image 1">
+            <img src="Fotos/carrycek 1.jpg" alt="Image 1">
         </div>
         <div class="carousel-slide">
-            <img src="https://cdn.prod.website-files.com/62c847ad5a8f51e7bc4309e6/65f49c9c6dc2aecf0f94346d_propiedades-bg%20Invert%C3%AD%20En%20Propiedades.jpg" alt="Image 2">
+            <img src="Fotos/carrucel 3.jpg" alt="Image 2">
         </div>
         <div class="carousel-slide">
-            <img src="https://elcerramiento.mx/wp-content/uploads/2020/12/elceramiento-32-fachadas-residenciales-1.jpg" alt="Image 3">
+            <img src="Fotos/carrucel 2.jpg" alt="Image 3">
         </div>
     </div>
 </div>
@@ -198,5 +207,13 @@
 </footer>
 
 <script src="index.js"></script>
+
+<script>
+    window.addEventListener('load', () => {
+        const spinner = document.getElementById('spinner');
+        spinner.classList.add('hide');
+    });
+</script>
+
 </body>
 </html>
